@@ -19,7 +19,7 @@ export function MainLayout({ children }: MainLayoutProps) {
           <Link to="/" className="flex items-center gap-2 md:gap-3 group">
             <img src="/images/common/logo.jpg" alt="Logo Thầy Cường Lee" className="w-10 h-10 md:w-14 md:h-14 rounded-xl object-cover border border-slate-200 shadow-sm" />
             <div>
-              <h1 className="font-bold text-base md:text-xl text-slate-800 leading-tight">Trung Tâm Trí Thức Mới</h1>
+              <h1 className="font-bold text-base md:text-xl text-slate-800 leading-tight">Trung Tâm Tri Thức Mới</h1>
               <p className="text-[10px] md:text-xs text-blue-600 font-medium tracking-wider">Hệ Thống học Toán</p>
             </div>
           </Link>
@@ -141,7 +141,7 @@ export function MainLayout({ children }: MainLayoutProps) {
                 </li>
                 <li className="flex gap-2 items-start">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 mt-0.5 text-blue-400"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-                  <a href="https://www.facebook.com/GiaiTriHayGiaiToan/" target="_blank" rel="noreferrer" className="hover:text-blue-400 transition-colors">Giải Trí Hay Giải Toán</a>
+                  <a href="https://www.facebook.com/GiaiTriHayGiaiToan/" target="_blank" rel="noreferrer" className="hover:text-blue-400 transition-colors">Giải Tri Hay Giải Toán</a>
                 </li>
                 <li className="flex gap-2 items-start">
                   <Video className="w-4 h-4 mt-0.5 text-blue-400" />
