@@ -3,10 +3,12 @@ import react, { reactCompilerPreset } from '@vitejs/plugin-react'
 import babel from '@rolldown/plugin-babel'
 import path from "path"
 import tailwindcss from "@tailwindcss/vite"
+import { TanStackRouterVite } from '@tanstack/router-plugin/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
+    TanStackRouterVite(),
     react(),
     tailwindcss(),
     babel({ presets: [reactCompilerPreset()] })
@@ -16,4 +18,8 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  server: {
+    port: 3000,
+    open: true
+  }
 })
