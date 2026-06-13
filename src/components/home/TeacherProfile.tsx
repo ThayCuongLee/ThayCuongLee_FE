@@ -11,7 +11,7 @@ const achievements = [
   },
   {
     title: 'Thủ Khoa',
-    subtitle: 'Đầu vào ĐH Sư Phạm (28.5đ)',
+    subtitle: 'Đầu vào ĐH Sư Phạm',
     year: '2013',
     icon: Star,
     color: 'from-blue-400 to-blue-600',
@@ -59,7 +59,7 @@ const roadmap = [
     color: 'bg-blue-600',
     items: [
       'Giáo viên luyện thi Đại học trên 10 năm kinh nghiệm.',
-      'Bồi dưỡng Olympic Toán 10 đạt 3 HCV - 3 HCB - 3 HCĐ.'
+      'Bồi dưỡng Olympic Toán 10 đạt 3 HCV - 3 HCB - 7 HCĐ.'
     ]
   },
   {
@@ -69,8 +69,8 @@ const roadmap = [
     icon: BookOpen,
     color: 'bg-blue-500',
     items: [
-      'Điểm L.Văn: 9.4đ',
-      'Điểm TB: 9.0/10'
+      'Điểm Luận văn Tốt nghiệp: 9.4/10',
+      'Điểm GPA: 9.0/10'
     ]
   },
   {
