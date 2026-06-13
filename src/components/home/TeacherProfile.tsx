@@ -35,7 +35,7 @@ const achievements = [
   },
   {
     title: 'Giải NHẤT',
-    subtitle: 'SG Toán 9 - Tỉnh Đồng Nai',
+    subtitle: 'HSG Toán 9 - Tỉnh Đồng Nai',
     year: '2010',
     icon: Trophy,
     color: 'from-emerald-400 to-emerald-600',
