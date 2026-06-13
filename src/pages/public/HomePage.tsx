@@ -1,6 +1,6 @@
 import { Link } from '@tanstack/react-router'
 import { PlayCircle, ArrowRight } from 'lucide-react'
-import { TikTokEmbed } from '../components/common/TikTokEmbed'
+import { TikTokEmbed } from '../../components/common/TikTokEmbed'
 
 export default function HomePage() {
   return (
