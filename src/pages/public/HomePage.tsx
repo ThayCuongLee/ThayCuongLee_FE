@@ -31,24 +31,12 @@ export default function HomePage() {
               </div>
             </div>
             
-            <div className="relative order-1 md:order-2 px-4 md:px-0">
+            <div className="relative order-1 md:order-2 px-4 md:px-0 flex items-center justify-center">
               <div className="absolute inset-0 bg-blue-400 rounded-full blur-3xl opacity-30 animate-pulse"></div>
-              <img 
-                src="/images/common/thay-cuong-lee-avatar.webp" 
-                alt="Thầy Cường Lee" 
-                className="relative z-10 rounded-2xl shadow-2xl border-4 border-white/20 transform md:rotate-2 hover:rotate-0 transition-transform duration-500 w-full h-[350px] sm:h-[450px] md:h-[550px] object-cover object-top"
-              />
-            </div>
-          </div>
-
-          {/* Schedule Banner inside Hero */}
-          <div className="w-full text-center max-w-5xl mx-auto">
-            <h2 className="text-2xl font-bold text-yellow-300 mb-6 drop-shadow-md uppercase tracking-wider">Lịch Khai Giảng Năm Học Mới</h2>
-            <div className="rounded-3xl overflow-hidden shadow-2xl shadow-blue-900/50 border-4 border-white/20 hover:border-white/40 transition-all transform hover:-translate-y-2 bg-white/10 backdrop-blur-sm">
               <img 
                 src="/images/common/lich-hoc-toan-thay-cuong.webp" 
                 alt="Lịch học toán năm học mới Thầy Cường Lee" 
-                className="w-full h-auto"
+                className="relative z-10 w-full h-auto rounded-2xl shadow-2xl border-4 border-white/20 hover:border-white/40 transition-all hover:-translate-y-2"
               />
             </div>
           </div>

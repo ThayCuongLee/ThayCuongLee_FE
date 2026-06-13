@@ -1,6 +1,13 @@
 ﻿import { createLazyFileRoute } from '@tanstack/react-router'
-import QAPage from '../pages/QAPage'
+import { lazy, Suspense } from 'react'
+import { Loading } from '../components/common/Loading'
+
+const QAPage = lazy(() => import('../pages/public/QAPage'))
 
 export const Route = createLazyFileRoute('/qa')({
-  component: QAPage,
+  component: () => (
+    <Suspense fallback={<Loading fullScreen variant="math" text="Đang tải..." />}>
+      <QAPage />
+    </Suspense>
+  ),
 })

@@ -1,6 +1,13 @@
 ﻿import { createLazyFileRoute } from '@tanstack/react-router'
-import BlogPage from '../pages/BlogPage'
+import { lazy, Suspense } from 'react'
+import { Loading } from '../components/common/Loading'
+
+const BlogPage = lazy(() => import('../pages/public/BlogPage'))
 
 export const Route = createLazyFileRoute('/blog')({
-  component: BlogPage,
+  component: () => (
+    <Suspense fallback={<Loading fullScreen variant="math" text="Đang tải..." />}>
+      <BlogPage />
+    </Suspense>
+  ),
 })

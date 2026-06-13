@@ -17,9 +17,9 @@ export function MainLayout({ children }: MainLayoutProps) {
       <header className="bg-white border-b sticky top-0 z-50 shadow-sm">
         <div className="container mx-auto px-4 py-4 md:py-5 flex justify-between items-center max-w-7xl">
           <Link to="/" className="flex items-center gap-2 md:gap-3 group">
-            <img src="/images/common/logo.jpg" alt="Logo Thầy Cường Lee" className="w-10 h-10 md:w-14 md:h-14 rounded-xl object-cover border border-slate-200 shadow-sm" />
+            <img src="/images/common/logo.webp" alt="Logo Thầy Cường Lee" className="w-10 h-10 md:w-14 md:h-14 rounded-xl object-cover border border-slate-200 shadow-sm" />
             <div>
-              <h1 className="font-bold text-base md:text-xl text-slate-800 leading-tight">Trung Tâm Tri Thức Mới</h1>
+              <h1 className="font-bold text-base md:text-xl text-slate-800 leading-tight">Thầy Cường Lee</h1>
               <p className="text-[10px] md:text-xs text-blue-600 font-medium tracking-wider">Hệ Thống học Toán</p>
             </div>
           </Link>
@@ -98,7 +98,7 @@ export function MainLayout({ children }: MainLayoutProps) {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1 md:col-span-1">
               <Link to="/" className="flex items-center gap-3 mb-6 group">
-                <img src="/images/common/logo.jpg" alt="Logo Thầy Cường Lee" className="w-12 h-12 rounded-xl object-cover border border-slate-700 shadow-md" />
+                <img src="/images/common/logo.webp" alt="Logo Thầy Cường Lee" className="w-12 h-12 rounded-xl object-cover border border-slate-700 shadow-md" />
                 <div>
                   <h2 className="font-bold text-lg text-white">Thầy Cường Lee</h2>
                 </div>

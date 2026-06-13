@@ -23,7 +23,7 @@ export default function LoginPage() {
           
           <div className="relative z-10">
             <Link to="/" className="inline-flex items-center gap-2 mb-12 group">
-              <img src="/images/common/logo.jpg" alt="Logo Thầy Cường Lee" className="w-12 h-12 rounded-xl object-cover border-2 border-white/50 group-hover:scale-105 transition-transform" />
+              <img src="/images/common/logo.webp" alt="Logo Thầy Cường Lee" className="w-12 h-12 rounded-xl object-cover border-2 border-white/50 group-hover:scale-105 transition-transform" />
               <span className="font-bold text-2xl tracking-tight">Thầy Cường Lee</span>
             </Link>
             
