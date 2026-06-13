@@ -8,119 +8,126 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { createFileRoute } from '@tanstack/react-router'
-
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as PublicRouteImport } from './routes/_public'
+import { Route as AppRouteImport } from './routes/_app'
+import { Route as PublicIndexRouteImport } from './routes/_public/index'
+import { Route as PublicQaRouteImport } from './routes/_public/qa'
+import { Route as PublicLoginRouteImport } from './routes/_public/login'
+import { Route as PublicFeedbackRouteImport } from './routes/_public/feedback'
+import { Route as PublicDocumentsRouteImport } from './routes/_public/documents'
+import { Route as PublicCoursesRouteImport } from './routes/_public/courses'
+import { Route as PublicContactRouteImport } from './routes/_public/contact'
+import { Route as PublicBlogRouteImport } from './routes/_public/blog'
+import { Route as PublicAchievementsRouteImport } from './routes/_public/achievements'
+import { Route as PublicAboutRouteImport } from './routes/_public/about'
+import { Route as AppStudentDashboardRouteImport } from './routes/_app/student/dashboard'
 
-const QaLazyRouteImport = createFileRoute('/qa')()
-const LoginLazyRouteImport = createFileRoute('/login')()
-const FeedbackLazyRouteImport = createFileRoute('/feedback')()
-const DocumentsLazyRouteImport = createFileRoute('/documents')()
-const CoursesLazyRouteImport = createFileRoute('/courses')()
-const ContactLazyRouteImport = createFileRoute('/contact')()
-const BlogLazyRouteImport = createFileRoute('/blog')()
-const AchievementsLazyRouteImport = createFileRoute('/achievements')()
-const AboutLazyRouteImport = createFileRoute('/about')()
-const IndexLazyRouteImport = createFileRoute('/')()
-const StudentDashboardLazyRouteImport = createFileRoute('/student/dashboard')()
-
-const QaLazyRoute = QaLazyRouteImport.update({
-  id: '/qa',
-  path: '/qa',
+const PublicRoute = PublicRouteImport.update({
+  id: '/_public',
   getParentRoute: () => rootRouteImport,
-} as any).lazy(() => import('./routes/qa.lazy').then((d) => d.Route))
-const LoginLazyRoute = LoginLazyRouteImport.update({
-  id: '/login',
-  path: '/login',
+} as any)
+const AppRoute = AppRouteImport.update({
+  id: '/_app',
   getParentRoute: () => rootRouteImport,
-} as any).lazy(() => import('./routes/login.lazy').then((d) => d.Route))
-const FeedbackLazyRoute = FeedbackLazyRouteImport.update({
-  id: '/feedback',
-  path: '/feedback',
-  getParentRoute: () => rootRouteImport,
-} as any).lazy(() => import('./routes/feedback.lazy').then((d) => d.Route))
-const DocumentsLazyRoute = DocumentsLazyRouteImport.update({
-  id: '/documents',
-  path: '/documents',
-  getParentRoute: () => rootRouteImport,
-} as any).lazy(() => import('./routes/documents.lazy').then((d) => d.Route))
-const CoursesLazyRoute = CoursesLazyRouteImport.update({
-  id: '/courses',
-  path: '/courses',
-  getParentRoute: () => rootRouteImport,
-} as any).lazy(() => import('./routes/courses.lazy').then((d) => d.Route))
-const ContactLazyRoute = ContactLazyRouteImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any).lazy(() => import('./routes/contact.lazy').then((d) => d.Route))
-const BlogLazyRoute = BlogLazyRouteImport.update({
-  id: '/blog',
-  path: '/blog',
-  getParentRoute: () => rootRouteImport,
-} as any).lazy(() => import('./routes/blog.lazy').then((d) => d.Route))
-const AchievementsLazyRoute = AchievementsLazyRouteImport.update({
-  id: '/achievements',
-  path: '/achievements',
-  getParentRoute: () => rootRouteImport,
-} as any).lazy(() => import('./routes/achievements.lazy').then((d) => d.Route))
-const AboutLazyRoute = AboutLazyRouteImport.update({
-  id: '/about',
-  path: '/about',
-  getParentRoute: () => rootRouteImport,
-} as any).lazy(() => import('./routes/about.lazy').then((d) => d.Route))
-const IndexLazyRoute = IndexLazyRouteImport.update({
+} as any)
+const PublicIndexRoute = PublicIndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any).lazy(() => import('./routes/index.lazy').then((d) => d.Route))
-const StudentDashboardLazyRoute = StudentDashboardLazyRouteImport.update({
+  getParentRoute: () => PublicRoute,
+} as any)
+const PublicQaRoute = PublicQaRouteImport.update({
+  id: '/qa',
+  path: '/qa',
+  getParentRoute: () => PublicRoute,
+} as any)
+const PublicLoginRoute = PublicLoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => PublicRoute,
+} as any)
+const PublicFeedbackRoute = PublicFeedbackRouteImport.update({
+  id: '/feedback',
+  path: '/feedback',
+  getParentRoute: () => PublicRoute,
+} as any)
+const PublicDocumentsRoute = PublicDocumentsRouteImport.update({
+  id: '/documents',
+  path: '/documents',
+  getParentRoute: () => PublicRoute,
+} as any)
+const PublicCoursesRoute = PublicCoursesRouteImport.update({
+  id: '/courses',
+  path: '/courses',
+  getParentRoute: () => PublicRoute,
+} as any)
+const PublicContactRoute = PublicContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => PublicRoute,
+} as any)
+const PublicBlogRoute = PublicBlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => PublicRoute,
+} as any)
+const PublicAchievementsRoute = PublicAchievementsRouteImport.update({
+  id: '/achievements',
+  path: '/achievements',
+  getParentRoute: () => PublicRoute,
+} as any)
+const PublicAboutRoute = PublicAboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => PublicRoute,
+} as any)
+const AppStudentDashboardRoute = AppStudentDashboardRouteImport.update({
   id: '/student/dashboard',
   path: '/student/dashboard',
-  getParentRoute: () => rootRouteImport,
-} as any).lazy(() =>
-  import('./routes/student/dashboard.lazy').then((d) => d.Route),
-)
+  getParentRoute: () => AppRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexLazyRoute
-  '/about': typeof AboutLazyRoute
-  '/achievements': typeof AchievementsLazyRoute
-  '/blog': typeof BlogLazyRoute
-  '/contact': typeof ContactLazyRoute
-  '/courses': typeof CoursesLazyRoute
-  '/documents': typeof DocumentsLazyRoute
-  '/feedback': typeof FeedbackLazyRoute
-  '/login': typeof LoginLazyRoute
-  '/qa': typeof QaLazyRoute
-  '/student/dashboard': typeof StudentDashboardLazyRoute
+  '/': typeof PublicIndexRoute
+  '/about': typeof PublicAboutRoute
+  '/achievements': typeof PublicAchievementsRoute
+  '/blog': typeof PublicBlogRoute
+  '/contact': typeof PublicContactRoute
+  '/courses': typeof PublicCoursesRoute
+  '/documents': typeof PublicDocumentsRoute
+  '/feedback': typeof PublicFeedbackRoute
+  '/login': typeof PublicLoginRoute
+  '/qa': typeof PublicQaRoute
+  '/student/dashboard': typeof AppStudentDashboardRoute
 }
 export interface FileRoutesByTo {
-  '/': typeof IndexLazyRoute
-  '/about': typeof AboutLazyRoute
-  '/achievements': typeof AchievementsLazyRoute
-  '/blog': typeof BlogLazyRoute
-  '/contact': typeof ContactLazyRoute
-  '/courses': typeof CoursesLazyRoute
-  '/documents': typeof DocumentsLazyRoute
-  '/feedback': typeof FeedbackLazyRoute
-  '/login': typeof LoginLazyRoute
-  '/qa': typeof QaLazyRoute
-  '/student/dashboard': typeof StudentDashboardLazyRoute
+  '/': typeof PublicIndexRoute
+  '/about': typeof PublicAboutRoute
+  '/achievements': typeof PublicAchievementsRoute
+  '/blog': typeof PublicBlogRoute
+  '/contact': typeof PublicContactRoute
+  '/courses': typeof PublicCoursesRoute
+  '/documents': typeof PublicDocumentsRoute
+  '/feedback': typeof PublicFeedbackRoute
+  '/login': typeof PublicLoginRoute
+  '/qa': typeof PublicQaRoute
+  '/student/dashboard': typeof AppStudentDashboardRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  '/': typeof IndexLazyRoute
-  '/about': typeof AboutLazyRoute
-  '/achievements': typeof AchievementsLazyRoute
-  '/blog': typeof BlogLazyRoute
-  '/contact': typeof ContactLazyRoute
-  '/courses': typeof CoursesLazyRoute
-  '/documents': typeof DocumentsLazyRoute
-  '/feedback': typeof FeedbackLazyRoute
-  '/login': typeof LoginLazyRoute
-  '/qa': typeof QaLazyRoute
-  '/student/dashboard': typeof StudentDashboardLazyRoute
+  '/_app': typeof AppRouteWithChildren
+  '/_public': typeof PublicRouteWithChildren
+  '/_public/about': typeof PublicAboutRoute
+  '/_public/achievements': typeof PublicAchievementsRoute
+  '/_public/blog': typeof PublicBlogRoute
+  '/_public/contact': typeof PublicContactRoute
+  '/_public/courses': typeof PublicCoursesRoute
+  '/_public/documents': typeof PublicDocumentsRoute
+  '/_public/feedback': typeof PublicFeedbackRoute
+  '/_public/login': typeof PublicLoginRoute
+  '/_public/qa': typeof PublicQaRoute
+  '/_public/': typeof PublicIndexRoute
+  '/_app/student/dashboard': typeof AppStudentDashboardRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -151,127 +158,164 @@ export interface FileRouteTypes {
     | '/student/dashboard'
   id:
     | '__root__'
-    | '/'
-    | '/about'
-    | '/achievements'
-    | '/blog'
-    | '/contact'
-    | '/courses'
-    | '/documents'
-    | '/feedback'
-    | '/login'
-    | '/qa'
-    | '/student/dashboard'
+    | '/_app'
+    | '/_public'
+    | '/_public/about'
+    | '/_public/achievements'
+    | '/_public/blog'
+    | '/_public/contact'
+    | '/_public/courses'
+    | '/_public/documents'
+    | '/_public/feedback'
+    | '/_public/login'
+    | '/_public/qa'
+    | '/_public/'
+    | '/_app/student/dashboard'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  IndexLazyRoute: typeof IndexLazyRoute
-  AboutLazyRoute: typeof AboutLazyRoute
-  AchievementsLazyRoute: typeof AchievementsLazyRoute
-  BlogLazyRoute: typeof BlogLazyRoute
-  ContactLazyRoute: typeof ContactLazyRoute
-  CoursesLazyRoute: typeof CoursesLazyRoute
-  DocumentsLazyRoute: typeof DocumentsLazyRoute
-  FeedbackLazyRoute: typeof FeedbackLazyRoute
-  LoginLazyRoute: typeof LoginLazyRoute
-  QaLazyRoute: typeof QaLazyRoute
-  StudentDashboardLazyRoute: typeof StudentDashboardLazyRoute
+  AppRoute: typeof AppRouteWithChildren
+  PublicRoute: typeof PublicRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/qa': {
-      id: '/qa'
-      path: '/qa'
-      fullPath: '/qa'
-      preLoaderRoute: typeof QaLazyRouteImport
+    '/_public': {
+      id: '/_public'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof PublicRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/login': {
-      id: '/login'
-      path: '/login'
-      fullPath: '/login'
-      preLoaderRoute: typeof LoginLazyRouteImport
+    '/_app': {
+      id: '/_app'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof AppRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/feedback': {
-      id: '/feedback'
-      path: '/feedback'
-      fullPath: '/feedback'
-      preLoaderRoute: typeof FeedbackLazyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/documents': {
-      id: '/documents'
-      path: '/documents'
-      fullPath: '/documents'
-      preLoaderRoute: typeof DocumentsLazyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/courses': {
-      id: '/courses'
-      path: '/courses'
-      fullPath: '/courses'
-      preLoaderRoute: typeof CoursesLazyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactLazyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog': {
-      id: '/blog'
-      path: '/blog'
-      fullPath: '/blog'
-      preLoaderRoute: typeof BlogLazyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/achievements': {
-      id: '/achievements'
-      path: '/achievements'
-      fullPath: '/achievements'
-      preLoaderRoute: typeof AchievementsLazyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutLazyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/': {
-      id: '/'
+    '/_public/': {
+      id: '/_public/'
       path: '/'
       fullPath: '/'
-      preLoaderRoute: typeof IndexLazyRouteImport
-      parentRoute: typeof rootRouteImport
+      preLoaderRoute: typeof PublicIndexRouteImport
+      parentRoute: typeof PublicRoute
     }
-    '/student/dashboard': {
-      id: '/student/dashboard'
+    '/_public/qa': {
+      id: '/_public/qa'
+      path: '/qa'
+      fullPath: '/qa'
+      preLoaderRoute: typeof PublicQaRouteImport
+      parentRoute: typeof PublicRoute
+    }
+    '/_public/login': {
+      id: '/_public/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof PublicLoginRouteImport
+      parentRoute: typeof PublicRoute
+    }
+    '/_public/feedback': {
+      id: '/_public/feedback'
+      path: '/feedback'
+      fullPath: '/feedback'
+      preLoaderRoute: typeof PublicFeedbackRouteImport
+      parentRoute: typeof PublicRoute
+    }
+    '/_public/documents': {
+      id: '/_public/documents'
+      path: '/documents'
+      fullPath: '/documents'
+      preLoaderRoute: typeof PublicDocumentsRouteImport
+      parentRoute: typeof PublicRoute
+    }
+    '/_public/courses': {
+      id: '/_public/courses'
+      path: '/courses'
+      fullPath: '/courses'
+      preLoaderRoute: typeof PublicCoursesRouteImport
+      parentRoute: typeof PublicRoute
+    }
+    '/_public/contact': {
+      id: '/_public/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof PublicContactRouteImport
+      parentRoute: typeof PublicRoute
+    }
+    '/_public/blog': {
+      id: '/_public/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof PublicBlogRouteImport
+      parentRoute: typeof PublicRoute
+    }
+    '/_public/achievements': {
+      id: '/_public/achievements'
+      path: '/achievements'
+      fullPath: '/achievements'
+      preLoaderRoute: typeof PublicAchievementsRouteImport
+      parentRoute: typeof PublicRoute
+    }
+    '/_public/about': {
+      id: '/_public/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof PublicAboutRouteImport
+      parentRoute: typeof PublicRoute
+    }
+    '/_app/student/dashboard': {
+      id: '/_app/student/dashboard'
       path: '/student/dashboard'
       fullPath: '/student/dashboard'
-      preLoaderRoute: typeof StudentDashboardLazyRouteImport
-      parentRoute: typeof rootRouteImport
+      preLoaderRoute: typeof AppStudentDashboardRouteImport
+      parentRoute: typeof AppRoute
     }
   }
 }
 
+interface AppRouteChildren {
+  AppStudentDashboardRoute: typeof AppStudentDashboardRoute
+}
+
+const AppRouteChildren: AppRouteChildren = {
+  AppStudentDashboardRoute: AppStudentDashboardRoute,
+}
+
+const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren)
+
+interface PublicRouteChildren {
+  PublicAboutRoute: typeof PublicAboutRoute
+  PublicAchievementsRoute: typeof PublicAchievementsRoute
+  PublicBlogRoute: typeof PublicBlogRoute
+  PublicContactRoute: typeof PublicContactRoute
+  PublicCoursesRoute: typeof PublicCoursesRoute
+  PublicDocumentsRoute: typeof PublicDocumentsRoute
+  PublicFeedbackRoute: typeof PublicFeedbackRoute
+  PublicLoginRoute: typeof PublicLoginRoute
+  PublicQaRoute: typeof PublicQaRoute
+  PublicIndexRoute: typeof PublicIndexRoute
+}
+
+const PublicRouteChildren: PublicRouteChildren = {
+  PublicAboutRoute: PublicAboutRoute,
+  PublicAchievementsRoute: PublicAchievementsRoute,
+  PublicBlogRoute: PublicBlogRoute,
+  PublicContactRoute: PublicContactRoute,
+  PublicCoursesRoute: PublicCoursesRoute,
+  PublicDocumentsRoute: PublicDocumentsRoute,
+  PublicFeedbackRoute: PublicFeedbackRoute,
+  PublicLoginRoute: PublicLoginRoute,
+  PublicQaRoute: PublicQaRoute,
+  PublicIndexRoute: PublicIndexRoute,
+}
+
+const PublicRouteWithChildren =
+  PublicRoute._addFileChildren(PublicRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
-  IndexLazyRoute: IndexLazyRoute,
-  AboutLazyRoute: AboutLazyRoute,
-  AchievementsLazyRoute: AchievementsLazyRoute,
-  BlogLazyRoute: BlogLazyRoute,
-  ContactLazyRoute: ContactLazyRoute,
-  CoursesLazyRoute: CoursesLazyRoute,
-  DocumentsLazyRoute: DocumentsLazyRoute,
-  FeedbackLazyRoute: FeedbackLazyRoute,
-  LoginLazyRoute: LoginLazyRoute,
-  QaLazyRoute: QaLazyRoute,
-  StudentDashboardLazyRoute: StudentDashboardLazyRoute,
+  AppRoute: AppRouteWithChildren,
+  PublicRoute: PublicRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

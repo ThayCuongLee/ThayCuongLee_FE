@@ -26,13 +26,9 @@ export function MainLayout({ children }: MainLayoutProps) {
 
           <nav className="hidden lg:flex items-center gap-6">
             <Link to="/" className="text-slate-600 hover:text-blue-600 font-medium transition-colors">Trang chủ</Link>
-            <Link to="/about" className="text-slate-600 hover:text-blue-600 font-medium transition-colors">Giới thiệu</Link>
             <Link to="/courses" className="text-slate-600 hover:text-blue-600 font-medium transition-colors flex items-center gap-1">
               Khóa học
             </Link>
-            <Link to="/documents" className="text-slate-600 hover:text-blue-600 font-medium transition-colors">Tài liệu</Link>
-            <Link to="/achievements" className="text-slate-600 hover:text-blue-600 font-medium transition-colors">Thành tích</Link>
-            <Link to="/blog" className="text-slate-600 hover:text-blue-600 font-medium transition-colors">Tin tức</Link>
           </nav>
 
           <div className="flex items-center gap-3">
@@ -64,11 +60,7 @@ export function MainLayout({ children }: MainLayoutProps) {
         {isMobileMenuOpen && (
           <div className="lg:hidden absolute top-full left-0 w-full bg-white border-b shadow-lg py-4 px-4 flex flex-col gap-4 animate-in slide-in-from-top-2">
             <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-blue-600 font-medium py-2 border-b border-slate-50">Trang chủ</Link>
-            <Link to="/about" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-blue-600 font-medium py-2 border-b border-slate-50">Giới thiệu</Link>
             <Link to="/courses" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-blue-600 font-medium py-2 border-b border-slate-50">Khóa học</Link>
-            <Link to="/documents" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-blue-600 font-medium py-2 border-b border-slate-50">Tài liệu</Link>
-            <Link to="/achievements" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-blue-600 font-medium py-2 border-b border-slate-50">Thành tích</Link>
-            <Link to="/blog" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-600 hover:text-blue-600 font-medium py-2 border-b border-slate-50">Tin tức</Link>
             
             <div className="pt-2 md:hidden">
               {isAuthenticated ? (
@@ -145,7 +137,7 @@ export function MainLayout({ children }: MainLayoutProps) {
                 </li>
                 <li className="flex gap-2 items-start">
                   <Video className="w-4 h-4 mt-0.5 text-blue-400" />
-                  <a href="https://www.tiktok.com/@cuongleeminh" target="_blank" rel="noreferrer" className="hover:text-blue-400 transition-colors">Tiktok: @cuongleeminh</a>
+
                 </li>
 
               </ul>

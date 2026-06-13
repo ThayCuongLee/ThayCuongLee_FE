@@ -1,3 +1,4 @@
+import { createFileRoute } from '@tanstack/react-router'
 import { Link } from '@tanstack/react-router'
 import { mockCourses } from '../../mock/data'
 import { Search, Filter, Star, Users, Clock, BookOpen } from 'lucide-react'
@@ -86,3 +87,8 @@ export default function CoursesPage() {
     </div>
   )
 }
+
+
+export const Route = createFileRoute('/_public/courses')({
+  component: CoursesPage,
+})

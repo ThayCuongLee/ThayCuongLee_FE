@@ -1,3 +1,4 @@
+import { createFileRoute } from '@tanstack/react-router'
 import { useState } from 'react'
 import { Link } from '@tanstack/react-router'
 import { Lock, User, ArrowRight } from 'lucide-react'
@@ -134,3 +135,8 @@ export default function LoginPage() {
     </div>
   )
 }
+
+
+export const Route = createFileRoute('/_public/login')({
+  component: LoginPage,
+})

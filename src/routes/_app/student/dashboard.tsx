@@ -1,3 +1,4 @@
+import { createFileRoute } from '@tanstack/react-router'
 ﻿export default function StudentDashboardPage() {
   return (
     <div className="container mx-auto px-4 py-20 max-w-7xl">
@@ -6,3 +7,8 @@
     </div>
   )
 }
+
+
+export const Route = createFileRoute('/_app/student/dashboard')({
+  component: StudentDashboardPage,
+})

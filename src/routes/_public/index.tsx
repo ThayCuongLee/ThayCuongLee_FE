@@ -1,6 +1,8 @@
-import { Link } from '@tanstack/react-router'
-import { PlayCircle, ArrowRight } from 'lucide-react'
+import { createFileRoute } from '@tanstack/react-router'
 
+import { PlayCircle, ArrowRight } from 'lucide-react'
+import { TeacherProfile } from '@/components/home/TeacherProfile'
+import { TeachingExpertise } from '@/components/home/TeachingExpertise'
 
 export default function HomePage() {
   return (
@@ -22,11 +24,11 @@ export default function HomePage() {
                 Phương pháp giảng dạy hiện đại, tư duy logic bứt phá. Hệ thống học tập toàn diện từ cơ bản đến nâng cao dành cho học sinh từ lớp cấp 2 và cấp 3.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <Link to="/courses" className="bg-white text-blue-600 px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-base md:text-lg hover:bg-yellow-300 hover:text-slate-900 transition-all text-center flex items-center justify-center gap-2 shadow-lg shadow-white/20">
-                  Đăng ký học ngay <ArrowRight className="w-5 h-5" />
-                </Link>
-                <a href="#intro-video" className="bg-blue-700/50 hover:bg-blue-700 backdrop-blur-sm border border-blue-400/50 text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-base md:text-lg transition-all text-center flex items-center justify-center gap-2">
-                  <PlayCircle className="w-5 h-5" /> Xem giới thiệu
+                <a href="https://zalo.me/0366658231" target="_blank" rel="noreferrer" className="bg-white text-blue-600 px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-base md:text-lg hover:bg-yellow-300 hover:text-slate-900 transition-all text-center flex items-center justify-center gap-2 shadow-lg shadow-white/20">
+                  Liên hệ ngay <ArrowRight className="w-5 h-5" />
+                </a>
+                <a href="#teacher-profile" className="bg-blue-700/50 hover:bg-blue-700 backdrop-blur-sm border border-blue-400/50 text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-base md:text-lg transition-all text-center flex items-center justify-center gap-2">
+                  <PlayCircle className="w-5 h-5" /> Tìm hiểu về thầy
                 </a>
               </div>
             </div>
@@ -42,15 +44,15 @@ export default function HomePage() {
           </div>
         </div>
         
-        {/* Wave divider */}
-        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
-          <svg className="relative block w-full h-12 md:h-24" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118,130.83,127,201.3,121.75,242.4,118.82,283.4,112.44,321.39,56.44Z" className="fill-white"></path>
-          </svg>
-        </div>
       </section>
 
+      <TeacherProfile />
+      <TeachingExpertise />
 
     </div>
   )
 }
+
+export const Route = createFileRoute('/_public/')({
+  component: HomePage,
+})
